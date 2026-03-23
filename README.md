@@ -3,9 +3,9 @@
 <div align="center">
   <img src="assets/logo.png" alt="ViperPing Logo" width="250"/>
   
-  **Advanced Network Connectivity Monitoring Tool**
+  **Interactive Terminal-Based Network Connectivity Monitor**
   
-  [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+  [![License](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
   [![GitHub Stars](https://img.shields.io/github/stars/Fest1on/ViperPing)](https://github.com/Fest1on/ViperPing)
   [![Contributors](https://img.shields.io/github/contributors/Fest1on/ViperPing)](https://github.com/Fest1on/ViperPing/graphs/contributors)
 </div>
@@ -18,7 +18,8 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
-- [Usage](#usage)
+- [User Interface](#user-interface)
+- [Controls](#controls)
 - [Configuration](#configuration)
 - [Examples](#examples)
 - [Performance](#performance)
@@ -31,16 +32,16 @@
 
 ## 🎯 Overview
 
-ViperPing is a high-performance network diagnostic tool designed for monitoring host availability, measuring network latency, and analyzing connectivity patterns across distributed systems. Built with speed and reliability in mind, ViperPing provides real-time insights into network health with minimal overhead.
+ViperPing is a high-performance, interactive terminal-based network diagnostic tool designed for real-time monitoring of host availability and network latency. With a rich console UI, ViperPing provides instant visual feedback on network health, making it ideal for infrastructure monitoring, network troubleshooting, and continuous connectivity analysis.
 
-Whether you're managing infrastructure, debugging network issues, or performing continuous monitoring, ViperPing delivers accurate metrics with an intuitive interface and powerful command-line capabilities.
+Whether you're managing servers, debugging network issues, or performing live network monitoring, ViperPing delivers accurate metrics with an intuitive, interactive interface.
 
 ### Key Highlights
 
+- **Interactive Console UI**: Real-time visual feedback with dynamic updates
 - **Lightning-Fast Performance**: Optimized for minimal latency and maximum throughput
-- **Real-Time Monitoring**: Continuous connectivity checks with instant feedback
-- **Comprehensive Analytics**: Detailed statistics including min/max/avg response times
-- **Scalable Architecture**: Handle thousands of simultaneous ping operations
+- **Live Statistics**: Instant min/max/avg response time calculations
+- **Scalable Architecture**: Monitor hundreds of hosts simultaneously
 - **Production-Ready**: Battle-tested reliability for critical infrastructure
 
 ---
@@ -51,25 +52,25 @@ Whether you're managing infrastructure, debugging network issues, or performing 
 
 | Feature | Description |
 |---------|-------------|
-| **Multi-Host Pinging** | Simultaneously ping multiple targets with configurable intervals |
+| **Interactive UI** | Rich terminal interface with live updates and navigation |
+| **Multi-Host Monitoring** | Simultaneously monitor multiple targets with real-time stats |
 | **ICMP & TCP Support** | Multiple protocol options for different network scenarios |
-| **Packet Loss Detection** | Automatic detection and reporting of connectivity issues |
+| **Packet Loss Detection** | Real-time detection and visual indication of connectivity issues |
 | **Response Time Analysis** | Min, max, average, and percentile latency calculations |
-| **Geolocation Tracking** | Identify geographic location of pinged hosts |
+| **Live Statistics** | Continuously updated metrics displayed in the console |
+| **Color-Coded Results** | Visual indicators for host status (online/offline/warning) |
 | **DNS Resolution** | Built-in DNS lookup with caching for performance |
-| **Timeout Management** | Configurable timeouts for unreliable connections |
-| **Export Functionality** | Export results to JSON, CSV, or custom formats |
 
 ### Advanced Features
 
-- **Batch Operations**: Process hundreds of hosts from configuration files
-- **Alert Thresholds**: Automatic notifications when latency exceeds limits
-- **Historical Tracking**: Store and compare historical connectivity data
-- **Rate Limiting**: Control bandwidth usage with configurable ping rates
+- **Batch Host Management**: Add and manage multiple targets from the UI
+- **Alert System**: Visual and audio alerts when latency exceeds thresholds
+- **Historical Data**: Track connectivity trends over monitoring sessions
+- **Customizable Intervals**: Adjust ping rates on-the-fly from the interface
 - **IPv4 & IPv6 Support**: Full compatibility with both IP versions
-- **Custom Headers**: Add metadata to ping requests for tracing
-- **Concurrent Execution**: Parallel processing for improved performance
-- **Retry Logic**: Automatic retry mechanisms with exponential backoff
+- **Concurrent Execution**: Parallel processing for improved responsiveness
+- **Retry Logic**: Automatic retry mechanisms with configurable backoff
+- **Keyboard Navigation**: Efficient control with intuitive keybindings
 
 ---
 
@@ -77,8 +78,8 @@ Whether you're managing infrastructure, debugging network issues, or performing 
 
 ### Prerequisites
 
-- **OS**: Linux, macOS, or Windows
-- **Runtime**: [Specify your runtime/language and version]
+- **OS**: Linux, macOS, or Windows (with WSL)
+- **Terminal**: Modern terminal emulator (supports ANSI colors)
 - **Memory**: Minimum 256MB RAM
 - **Network**: Active internet connection for remote hosts
 
@@ -95,5 +96,6 @@ cd ViperPing
 # Build the project
 [build-command]
 
-# Verify installation
-./viper-ping --version
+# Run ViperPing
+./viper-ping
+
