@@ -44,3 +44,8 @@ After launching, the application opens an interactive console interface where yo
 git clone https://github.com/Fest1on/ViperPing.git
 cd ViperPing
 
+## 🔧 Build
+
+g++ *.cpp -o viperping
+./viperping
+
