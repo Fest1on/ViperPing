@@ -46,6 +46,6 @@ cd ViperPing
 
 ## 🔧 Build
 
-g++ *.cpp -o viperping
+g++ main.cpp -o viperping
 ./viperping
 
